@@ -1,0 +1,381 @@
+
+@import nostd
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+
+azul = #0070bb
+naranja = darken(#e44d26, 15%)
+negro = rgb(72, 72, 72)
+gris = lighten(negro, 40%)
+separador = lighten(gris, 60%)
+
+logos_position = 70%
+
+body *
+	font-family 'Questrial', sans-serif
+	letter-spacing 0.05em
+	color negro
+
+.logo
+.logo *
+	font-family 'sansationregular', Arial,Helvetica,Garuda,sans-serif		
+	font-weight bolder
+
+body#page
+	background: rgba(237,232,237,1);
+	background: -moz-linear-gradient(left, rgba(237,232,237,1) 0%, rgba(237,232,237,1) 4%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(237,232,237,1) 96%, rgba(237,232,237,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,232,237,1)), color-stop(4%, rgba(237,232,237,1)), color-stop(30%, rgba(255,255,255,1)), color-stop(70%, rgba(255,255,255,1)), color-stop(96%, rgba(237,232,237,1)), color-stop(100%, rgba(237,232,237,1)));
+	background: -webkit-linear-gradient(left, rgba(237,232,237,1) 0%, rgba(237,232,237,1) 4%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(237,232,237,1) 96%, rgba(237,232,237,1) 100%);
+	background: -o-linear-gradient(left, rgba(237,232,237,1) 0%, rgba(237,232,237,1) 4%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(237,232,237,1) 96%, rgba(237,232,237,1) 100%);
+	background: -ms-linear-gradient(left, rgba(237,232,237,1) 0%, rgba(237,232,237,1) 4%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(237,232,237,1) 96%, rgba(237,232,237,1) 100%);
+	background: linear-gradient(to right, rgba(237,232,237,1) 0%, rgba(237,232,237,1) 4%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(237,232,237,1) 96%, rgba(237,232,237,1) 100%);
+
+	@media screen and (max-width: 1024px)
+		background white
+
+	a
+		color gris
+
+		&:hover
+			color negro
+
+		&:focus
+			color gris
+
+		&:visited
+			color gris
+
+header
+	margin-top 1em
+	height 3em
+	.row
+		border-bottom 1px solid separador
+		height 100%
+	#uppersky-logo						
+		font-size 2rem
+		letter-spacing 0.05em
+
+		strong
+			color gris
+
+		span.sub
+			font-size 1.1rem
+			border-left 1px solid gris
+			padding-left 0.4em
+			margin-left @padding-left
+	#link-home
+		margin-top 0.5em
+		text-align right
+
+
+
+#presentacion
+	
+	margin-top 3em
+
+	#titulo
+		*
+			text-align center
+			margin 0px
+			font-family Arial
+
+		h4
+			font-weight normal
+			font-size 1.4em
+			letter-spacing 0.5em
+
+			@media screen and (max-width: 768px)
+				font-size 1em
+
+		h2
+			font-size 4.9em
+			line-height 1.1em
+			
+			@media screen and (max-width: 768px)
+				font-size 2.8em
+
+
+		h3
+			color gris
+			font-weight normal
+			font-size 1.7em
+
+			@media screen and (max-width: 768px)
+				font-size 1.2em
+
+			span
+				color darken(gris, 40%)
+
+	#curso-logo
+		height 14em
+		margin 3em 1em
+		margin-bottom 5em
+
+		@media screen and (max-width: 768px)
+			height 12em
+
+		#left
+			border-right 1px solid separador
+			background-image url('../img/html5.png')
+			background-position logos_position
+			prefixs(animation, slice_i 5s infinite alternate)
+
+		#right
+			border-left 1px solid separador
+			background-image url('../img/css.png')
+			background-position 100% - logos_position
+			prefixs(animation, slice 5s infinite alternate )
+	
+		#left, #right
+			height 100%
+			background-repeat no-repeat
+			background-size contain
+
+
+.bloque
+	margin-bottom 3em
+
+	h3
+		text-align center
+		margin 0em
+
+	h4
+		text-align center
+		font-size 1.2em
+		color gris
+
+	*
+		font-family 'Questrial'
+
+	
+	#grupo-I
+		border-right 1px solid separador
+		
+
+	.grupo-des
+		padding 0px
+		padding-bottom 3em
+
+		.dias-wrapper
+			width 100%
+			padding-left 0.6em		
+
+		.dia
+			display inline-block
+			width (95% / 5%)
+			text-align center
+			color white
+			padding 0.3em 0em
+
+			strong
+				font-size 1.5em
+				color white
+
+#costo
+	text-align center
+	border-right 1px solid separador
+
+	span
+		font-size 1.5em	
+
+	strong
+		font-size 5rem
+		line-height 1.3em
+
+#cupos, #costo
+	text-align center	
+	
+	span
+		font-size 1.5em	
+
+	strong
+		font-size 5rem		
+
+	.cuerpo
+		margin-top 1em
+
+#grupos
+#descripcion	
+#contenido
+#otros
+	margin-bottom 8rem	
+
+#descripcion
+	margin-top 4em	
+
+#inscripcion
+#contacto
+	margin-bottom 4em
+
+#contenido	
+
+	h2
+		text-align center
+		font-family 'Questrial'
+
+	
+	.timeline
+		height 1em		
+
+		@media screen and (max-width: 768px)
+			display none
+
+	.dia-cont
+		display inline-block
+		width (98% / 5%)
+		height 100%
+
+		@media screen and (max-width: 768px)
+			width (98% / 2%)
+
+		.fecha
+			text-align right						
+
+			span
+				color white
+				padding 0.3em 0.8em 0em
+				position relative
+				z-index 1
+				//top -1px
+
+				&:first-child
+					left 5px
+
+				&:last-child
+					border-right 2px solid negro					
+
+	.temas
+		border-top 3px solid negro	
+		z-index 20
+		position relative
+
+		@media screen and (max-width: 768px)
+			border-top none
+
+	.tema-wrapper
+		display inline-block
+
+		@media screen and (max-width: 768px)
+			width (98% / 2%)
+			border-top 3px solid negro	
+
+		@media screen and (max-width: 480px)
+			width (98% / 1%)
+
+	.tema
+		padding-top 0.5em
+		width 100%
+		display inline-block
+		vertical-align top		
+
+		div
+			margin-left 2em			
+			text-align right				
+
+		strong
+			font-size 0.95em
+			line-height 1em			
+
+		p
+			margin-top 0.4em
+			margin-bottom 1em
+			font-size 0.77em
+			line-height 1.1em
+			color darken(gris, 5%)
+
+			strong
+				font-size 1em
+				color darken(gris, 40%)
+				letter-spacing 0
+				font-weight normal
+
+	
+section
+	.titulo-wrapper
+		border-bottom 2px solid separador		
+
+		.titulo
+			text-align center
+			background separador
+			padding-top 0.3em
+			padding-bottom @padding-top
+			font-size 1.1em
+
+	.cuerpo
+		background lighten(separador, 60%)
+		padding 1em 3em
+		line-height 1.2em
+
+		strong
+			font-size 1em !important
+
+#contacto
+	text-align center
+	*
+		font-size 1.3em
+		line-height 1.3em
+
+	strong
+		font-size 1.3em
+
+
+
+footer
+	margin-top 2em
+	menu
+		height 3em
+		border-top 1px solid separador
+
+		div
+			margin-top 0.7em		
+
+.d25
+	background-color azul
+.d24
+	background-color lighten(azul, 10%)
+.d23
+	background-color lighten(azul, 20%)
+.d22
+	background-color lighten(azul, 30%)
+.d21
+	background-color lighten(azul, 40%)				
+
+.d15
+	background-color naranja
+.d14
+	background-color lighten(naranja, 10%)
+.d13
+	background-color lighten(naranja, 20%)
+.d12
+	background-color lighten(naranja, 30%)
+.d11
+	background-color lighten(naranja, 40%)
+
+@keyframes slice
+	0%
+		background-position -55%
+	20%
+		background-position 100% - logos_position
+	100%
+		background-position 100% - logos_position
+
+@keyframes slice_i
+	0%
+		background-position 155%
+	20%
+		background-position logos_position
+	100%
+		background-position logos_position
+
+
+
+@font-face {
+    font-family: 'sansationregular';
+    src: url('fonts/sansation_regular-webfont.eot');
+    src: url('fonts/sansation_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sansation_regular-webfont.woff') format('woff'),
+         url('fonts/sansation_regular-webfont.ttf') format('truetype'),
+         url('fonts/sansation_regular-webfont.svg#sansationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

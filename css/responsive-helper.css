@@ -1,0 +1,69 @@
+.responsive-helper {
+  height: 20px;
+  width: 100px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: #00f;
+  color: #fff;
+  text-align: center;
+  z-index: 100;
+  font-size: 0.9em
+}
+@media screen and (min-width: 1200px) {
+  .responsive-helper {
+    background-color: #ccf;
+    color: #666;
+  }
+  .responsive-helper:after {
+    content: '+1200px';
+  }
+}
+@media screen and (max-width: 1200px) {
+  .responsive-helper {
+    background-color: #99f;
+  }
+  .responsive-helper:after {
+    content: 'max. 1200px';
+  }
+}
+@media screen and (max-width: 1024px) {
+  .responsive-helper {
+    background-color: #66f;
+  }
+  .responsive-helper:after {
+    content: 'max. 1024px';
+  }
+}
+@media screen and (max-width: 768px) {
+  .responsive-helper {
+    background-color: #33f;
+  }
+  .responsive-helper:after {
+    content: 'max. 768px';
+  }
+}
+@media screen and (max-width: 600px) {
+  .responsive-helper {
+    background-color: #00f;
+  }
+  .responsive-helper:after {
+    content: 'max. 600px';
+  }
+}
+@media screen and (max-width: 480px) {
+  .responsive-helper {
+    background-color: #00c;
+  }
+  .responsive-helper:after {
+    content: 'max. 480px';
+  }
+}
+@media screen and (max-width: 320px) {
+  .responsive-helper {
+    background-color: #009;
+  }
+  .responsive-helper:after {
+    content: 'max. 320px';
+  }
+}

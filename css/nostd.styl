@@ -1,0 +1,77 @@
+
+// Mixins para propiedades css que no son estandar y que requieren prefijos
+
+transicion(cambios)
+	transition cambios
+	-webkit-transition cambios
+	-moz-transition cambios
+	-o-transition cambios	
+
+escalar_cuadrado(escala)
+
+	-webkit-transform scale(escala,escala);
+	-moz-transform scale(escala,escala);
+	-o-transform scale(escala,escala);
+	transform scale(escala,escala);
+
+bordes_redondeados(radio)
+	-webkit-border-radius: radio;
+	-moz-border-radius: radio;
+	border-radius: radio;
+
+bordes_redondeados_superior(radio)
+	-moz-border-radius-topleft: radio;
+	-moz-border-radius-topright: radio;
+	border-top-left-radius: radio;
+	border-top-right-radius: radio;
+
+bordes_redondeados_inferior(radio)
+	-webkit-border-bottom-right-radius radio
+	-webkit-border-bottom-left-radius radio
+	-moz-border-radius-bottomright radio
+	-moz-border-radius-bottomleft radio
+	border-bottom-right-radius radio
+	border-bottom-left-radius radio
+
+bordes_izquierdos_redondeados(radio)
+	-webkit-border-top-left-radius: radio
+	-webkit-border-bottom-left-radius: radio
+	-moz-border-radius-topleft: radio
+	-moz-border-radius-bottomleft: radio
+	border-top-left-radius: radio
+	border-bottom-left-radius: radio
+
+bordes_derechos_redondeados(radio)
+	-webkit-border-top-right-radius: radio
+	-webkit-border-bottom-right-radius: radio
+	-moz-border-radius-topright: radio
+	-moz-border-radius-bottomright: radio
+	border-top-right-radius: radio
+	border-bottom-right-radius: radio
+
+sombra_caja(ancho, alto, radio, propagacion, color_sombra)
+	-webkit-box-shadow: ancho alto radio propagacion color_sombra
+	-moz-box-shadow: ancho alto radio propagacion color_sombra
+	box-shadow: ancho alto radio propagacion color_sombra
+
+sombra_caja_in(ancho, alto, radio, propagacion, color_sombra)
+	-webkit-box-shadow: inset ancho alto radio propagacion color_sombra
+	-moz-box-shadow: inset ancho alto radio propagacion color_sombra
+	box-shadow: inset ancho alto radio propagacion color_sombra
+
+animacion(nombre, duracion)
+	-webkit-animation-name nombre
+	-moz-animation-name nombre
+	-ms-animation-name nombre
+	-o-animation-name nombre
+	-webkit-animation-duration duracion
+	-moz-animation-duration duracion
+	-ms-animation-duration duracion
+	-o-animation-duration duracion
+
+prefixs(propiedad, valor)
+	-webkit-{propiedad} valor
+	-moz-{propiedad} valor
+	-ms-{propiedad} valor
+	-o-{propiedad} valor
+	{propiedad} valor
