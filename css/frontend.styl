@@ -1,0 +1,64 @@
+@import frontend_colors
+@import main
+
+@keyframes slice
+	0%
+		background-position -65%
+	20%
+		background-position 100% - logos_position
+	100%
+		background-position 100% - logos_position
+
+@keyframes slice_i
+	0%
+		background-position 165%
+	20%
+		background-position logos_position
+	100%
+		background-position logos_position
+
+@keyframes rslice
+	0%
+		background-position -160%
+	20%
+		background-position 100% - logos_position
+	100%
+		background-position 100% - logos_position
+
+@keyframes rslice_i
+	0%
+		background-position 260%
+	20%
+		background-position logos_position
+	100%
+		background-position logos_position
+
+@keyframes tslice
+	0%
+		background-position -260%
+	20%
+		background-position 100% - logos_position
+	100%
+		background-position 100% - logos_position
+
+@keyframes tslice_i
+	0%
+		background-position 360%
+	20%
+		background-position logos_position
+	100%
+		background-position logos_position
+
+#curso-logo
+	#left
+		background-image url('../img/html5.png')
+		prefixs(animation, slice_i 5s infinite alternate)
+
+			@media screen and (max-width: 600px)
+				prefixs(animation, rslice_i 5s infinite alternate)
+	#right
+		background-image url('../img/css.png')		
+		prefixs(animation, slice 5s infinite alternate )
+
+		@media screen and (max-width: 600px)
+			prefixs(animation, rslice 5s infinite alternate)

@@ -1,47 +1,42 @@
 
-html_img = "url('img/html5.png')"
-css_img = "url('img/css.png')"
+py_img = "url('img/pylogo.png')"
+dj_img = "url('img/dj-logo.png')"
 
-var anim_duration = 5;
-
-var l_esperado = 10;
 var l_interpolation = 0;
 
-var r_esperado = 10;
 var r_interpolation = 0;
 
 function cambiar_izquierdo(event){	
 
 	var l_elapsed = Math.floor( event.originalEvent.elapsedTime )	
 
-	if (l_esperado == l_elapsed){
-		l_interpolation++;
-		
-		if (l_interpolation % 2 == 0)
-			$('#left').css('background-image', html_img);
-		else
-			$('#left').css('background-image', css_img);
+	
+	l_interpolation++;
+	
+	if (l_interpolation % 2 == 0)
+		$('#left').css('background-image', py_img);
+	else
+		$('#left').css('background-image', dj_img);
 
-		l_esperado = l_elapsed + anim_duration*2;
+	l_esperado = l_elapsed + anim_duration;
 		
-	}
+	
 }
 
 function cambiar_derecho(event){	
 
 	var r_elapsed = Math.floor( event.originalEvent.elapsedTime )	
+	
+	r_interpolation++;
 
-	if (r_esperado == r_elapsed){
-		r_interpolation++;
+	if (r_interpolation % 2 == 0)
+		$('#right').css('background-image', dj_img);
+	else
+		$('#right').css('background-image', py_img);
 
-		if (r_interpolation % 2 == 0)
-			$('#right').css('background-image', css_img);
-		else
-			$('#right').css('background-image', html_img);
-
-		r_esperado = r_elapsed + anim_duration*2;
+	r_esperado = r_elapsed + anim_duration;
 		
-	}
+	
 }
 
 $(function(){
